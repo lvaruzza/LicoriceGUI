@@ -5,23 +5,25 @@
  */
 package licorice.gui;
 
+import gatkrunner.gatk.VCFUtils;
 import licorice.analysis.Analysis;
 import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import utils.ZipUtil;
 import utils.reference.GenomeRef;
 import utils.reference.SimpleGenomeRef;
 
 import javax.swing.*;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.StyledDocument;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Map;
 import java.util.Properties;
+
+import static utils.ZipUtil.directoryfy;
 
 /**
  *
@@ -192,7 +194,30 @@ public class MainPanel extends javax.swing.JPanel {
                 appendLog("Reference Error: '" + validation.getErrors() +"'\n");
                 return;
             }
-            analysis = new Analysis(genome, outputPath, inputPath);
+
+            Path effectivePath=ZipUtil.directoryfy(inputPath);
+
+            Map<String,String> samples = VCFUtils.makeSamplesDictionary(VCFUtils.listVCFFiles(effectivePath));
+
+            appendLog("==================================\n");
+            appendLog("Samples List\n");
+            appendLog("==================================\n");
+            appendLog("Sample\tFile");
+
+            samples.forEach( (k,v) -> appendLog(String.format("%s\t%s\n",k,v)));
+
+            appendLog("==================================\n");
+
+            Path samplesPath = inputPath.resolveSibling(
+                    FilenameUtils.getBaseName(inputPath.getFileName().toString()) + ".samples.txt");
+            appendLog("Samples List in: '" + samplesPath.getParent() +"'\n");
+
+            try(PrintStream out=new PrintStream(new FileOutputStream(samplesPath.toFile()))) {
+                out.println("Sample\tFile");
+                samples.forEach( (k,v) -> out.println(String.format("%s\t%s",k,v)));
+            }
+
+            analysis = new Analysis(genome, outputPath, VCFUtils.listVCFFiles(effectivePath));
             analysis.progressListener(progress -> progressBar.setValue(progress));
 
             analysis.onFinish(() -> {
