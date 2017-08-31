@@ -1,0 +1,6 @@
+[submodule "licorice"]
+	path = licorice
+	url = git@github.com:lvaruzza/licorice.git
+[submodule "gatkRunner"]
+	path = gatkRunner
+	url = git@github.com:lvaruzza/gatkRunner.git
