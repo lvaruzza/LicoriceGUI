@@ -106,7 +106,7 @@ public class MainPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(logPane);
 
         titleLabel.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        titleLabel.setText("Licorice 1.1");
+        titleLabel.setText("Licorice 1.2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

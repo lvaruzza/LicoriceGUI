@@ -5,9 +5,9 @@
  */
 package licorice.gui;
 
+import java.awt.*;
 import java.util.Properties;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
 /**
  *
@@ -22,8 +22,12 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 MainPanel gui = new MainPanel();
-                JFrame frame = new JFrame();
+                JFrame frame = new JFrame("Licorice 1.2");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                Image icon = new ImageIcon(getClass().getClassLoader().getResource("icon.png")).getImage();
+
+                frame.setIconImage(icon);
+
                 frame.getContentPane().add(gui);
                 frame.pack();
                 frame.setVisible(true);
