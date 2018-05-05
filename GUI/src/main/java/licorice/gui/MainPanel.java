@@ -106,7 +106,7 @@ public class MainPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(logPane);
 
         titleLabel.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        titleLabel.setText("Licorice 1.2");
+        titleLabel.setText("Licorice 1.3");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -217,7 +217,14 @@ public class MainPanel extends javax.swing.JPanel {
                 samples.forEach( (k,v) -> out.println(String.format("%s\t%s",k,v)));
             }
 
-            analysis = new Analysis(genome, outputPath, VCFUtils.listVCFFiles(effectivePath));
+            /*
+             * TODO: get from conf
+             */
+            int minQual = 30;
+
+
+            analysis = new Analysis(genome,  minQual ,outputPath, VCFUtils.listVCFFiles(effectivePath));
+
             analysis.progressListener(progress -> progressBar.setValue(progress));
 
             analysis.onFinish(() -> {
