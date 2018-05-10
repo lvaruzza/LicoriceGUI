@@ -2,48 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7c2dce-e457-494f-88cb-258e36e2fa73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_3_10_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_1_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_retrofit2_converter_gson_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_retrofit2_converter_scalars_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_retrofit2_retrofit_2_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/ionws.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/ionws_main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/ionws_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/wscli.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/wscli_main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/wscli_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/Licorice.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/gui.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/licorice.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/licorice.properties.orig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Illustration_Glycyrrhiza_glabra0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/BarcodedSamples.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/EasSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/Experiment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/ExperimentList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/Log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/Meta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/MetaData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/Reportstorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/ResultList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/SelectedPlugins.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/cli/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/services/ServiceBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/services/TorrentSuiteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/make_all.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/make_dist.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Licorice/Licorice.bat" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Licorice/Licorice.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Licorice/licorice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Licorice/licorice.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_samtools_htsjdk_2_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__gov_nih_nlm_ncbi_ngs_java_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_0_3_rc3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/gui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/gui.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatkRunner" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatkRunner/gatkRunner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner/gatkRunner.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatkRunner/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licorice" beforeDir="false" afterPath="$PROJECT_DIR$/licorice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/licorice/licorice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/licorice/licorice.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/gatkRunner/target/" />
     <ignored path="$PROJECT_DIR$/GUI/target/" />
@@ -84,95 +52,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionws/src/main/java/licorice/ws/cli/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Analysis.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Analysis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="55" column="55" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunBCFtools.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBCFtools.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1640">
-              <caret line="94" column="36" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunBinary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBinary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainPanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="108" column="40" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Result.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/Result.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5080">
-              <caret line="388" column="54" selection-start-line="388" selection-start-column="54" selection-end-line="388" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Meta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/Meta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="65" column="18" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MetaData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/MetaData.java">
+      <file leaf-file-name="TestIndex.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestIndex.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Reportstorage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/Reportstorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResultList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/ResultList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -198,7 +82,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/gatkRunner" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -560,13 +444,47 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
               <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gatk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
@@ -602,6 +520,13 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
@@ -672,6 +597,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -848,19 +774,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="TestNG.TestVCFUtils.testGetSampleName" />
@@ -922,12 +835,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="727" width="2560" height="1413" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="725" width="2560" height="1415" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3287037" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -948,6 +859,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3287037" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -999,13 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestIndex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1253,9 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1329,6 +1231,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="108" column="40" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestIndex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
