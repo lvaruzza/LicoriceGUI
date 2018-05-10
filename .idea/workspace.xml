@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7c2dce-e457-494f-88cb-258e36e2fa73" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_samtools_htsjdk_2_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__gov_nih_nlm_ncbi_ngs_java_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_0_3_rc3.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/gui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/gui.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatkRunner" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatkRunner/gatkRunner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner/gatkRunner.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatkRunner/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatkRunner/src/main/java/gatkrunner/gatk/GATKFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner/src/main/java/gatkrunner/gatk/GATKFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestHelp.java" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestHelp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/licorice" beforeDir="false" afterPath="$PROJECT_DIR$/licorice" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/licorice/licorice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/licorice/licorice.iml" afterDir="false" />
     </list>
@@ -52,11 +51,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestIndex.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestIndex.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestIndex.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestHelp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestHelp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestCombineVariants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestCombineVariants.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GATKFacade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gatkRunner/src/main/java/gatkrunner/gatk/GATKFacade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="117" column="9" lean-forward="true" selection-start-line="112" selection-start-column="4" selection-end-line="117" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestFacade.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestFacade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -418,6 +453,8 @@
         <option value="$PROJECT_DIR$/ionws/src/main/java/licorice/ws/cli/Main.java" />
         <option value="$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBinary.java" />
         <option value="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" />
+        <option value="$PROJECT_DIR$/gatkRunner/src/main/java/gatkrunner/gatk/GATKFacade.java" />
+        <option value="$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestHelp.java" />
       </list>
     </option>
   </component>
@@ -461,6 +498,39 @@
               <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
               <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="gatk" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="reference" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
@@ -619,7 +689,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="TestNG.TestHelp">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -664,6 +734,35 @@
         <value defaultName="singleModule" />
       </option>
       <patterns />
+    </configuration>
+    <configuration name="TestHelp" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="gatkRunner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gatkrunner.gatk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="gatkrunner.gatk" />
+      <option name="MAIN_CLASS_NAME" value="gatkrunner.gatk.TestHelp" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
     </configuration>
     <configuration name="TestRunner" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="licorice" />
@@ -779,9 +878,11 @@
       <item itemvalue="TestNG.TestVCFUtils.testGetSampleName" />
       <item itemvalue="TestNG.TestVCFUtils.testMakeSamplesDictionary" />
       <item itemvalue="TestNG.TestRunner" />
+      <item itemvalue="TestNG.TestHelp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestHelp" />
         <item itemvalue="TestNG.TestRunner" />
         <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.TestVCFUtils.testMakeSamplesDictionary" />
@@ -836,9 +937,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="725" width="2560" height="1415" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.32796934" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -859,7 +962,6 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3287037" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -893,34 +995,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gatkRunner/src/main/java/gatkrunner/gatk/VCFUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="58" column="58" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestVCFUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" selection-start-line="31" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/UNIXProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="184" column="23" selection-start-line="184" selection-start-column="23" selection-end-line="184" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/licorice/src/main/java/utils/ZipUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -1236,8 +1310,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestIndex.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestCombineVariants.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatkRunner/src/main/java/gatkrunner/gatk/GATKFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="117" column="9" lean-forward="true" selection-start-line="112" selection-start-column="4" selection-end-line="117" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestHelp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
         </state>
       </provider>
     </entry>
