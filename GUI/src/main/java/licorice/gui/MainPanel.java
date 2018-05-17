@@ -37,6 +37,9 @@ public class MainPanel extends javax.swing.JPanel {
     private StyledDocument doc;
     private final JFileChooser fc = new JFileChooser();
 
+    private Integer minQual = 30;
+
+
     /**
      * Creates new form MainPanel
      */
@@ -46,6 +49,7 @@ public class MainPanel extends javax.swing.JPanel {
             System.out.println(String.format("JAR Path '%s'",jarPath));
 
             prop.load(new FileInputStream("licorice.properties"));
+            minQual = Integer.parseInt(prop.getProperty("minimum.quality"));
             initComponents();
             doc = logPane.getStyledDocument();
 
@@ -79,7 +83,10 @@ public class MainPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         logPane = new javax.swing.JTextPane();
         titleLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        minQualField = new javax.swing.JTextField();
 
+        inputLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         inputLabel.setLabelFor(inputLabel);
         inputLabel.setText("Input");
 
@@ -93,7 +100,7 @@ public class MainPanel extends javax.swing.JPanel {
             }
         });
 
-        processBtn.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        processBtn.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         processBtn.setText("Process");
         processBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,7 +113,13 @@ public class MainPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(logPane);
 
         titleLabel.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        titleLabel.setText("Licorice:  Version 1.4 (beefeater)");
+        titleLabel.setText("Licorice 1.4 (beefeater)");
+
+        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel1.setText("Min. Quality");
+
+        minQualField.setText(minQual.toString());
+        minQualField.setToolTipText("Minimum Variant Quality");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -115,22 +128,25 @@ public class MainPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1143, Short.MAX_VALUE)
                     .addComponent(progressBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(inputLabel)
-                        .addGap(18, 18, 18)
+                        .addGap(57, 57, 57)
                         .addComponent(fileNameField)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fileDialogBtn))
+                        .addComponent(fileDialogBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(titleLabel)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(titleLabel)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(214, 214, 214)
+                                .addComponent(processBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(285, 285, 285)
-                .addComponent(processBtn)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,12 +158,15 @@ public class MainPanel extends javax.swing.JPanel {
                     .addComponent(fileNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(fileDialogBtn)
                     .addComponent(inputLabel))
-                .addGap(12, 12, 12)
-                .addComponent(processBtn)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(processBtn)
+                    .addComponent(jLabel1)
+                    .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 255, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -165,6 +184,8 @@ public class MainPanel extends javax.swing.JPanel {
 
     private void processBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processBtnActionPerformed
         try {
+            minQual = Integer.parseInt(minQualField.getText());
+
             processBtn.setEnabled(false);
             //progressBar = new JProgressBar();
             progressBar.setMinimum(0);
@@ -172,6 +193,7 @@ public class MainPanel extends javax.swing.JPanel {
 
             Path genomePath = Paths.get(prop.getProperty("genome.path"));
             prop.setProperty("input.default_dir", fc.getCurrentDirectory().getAbsolutePath());
+            prop.setProperty("minimum.quality",minQual.toString());
             prop.store(new FileOutputStream("licorice.properties"), null);
 
             Path inputPath = Paths.get(fileNameField.getText());
@@ -219,11 +241,6 @@ public class MainPanel extends javax.swing.JPanel {
                 out.println("Sample\tFile");
                 samples.forEach( (k,v) -> out.println(String.format("%s\t%s",k,v)));
             }
-
-            /*
-             * TODO: get from conf
-             */
-            int minQual = 30;
 
 
             analysis = new Analysis(genome,  minQual ,outputPath, VCFUtils.listVCFFiles(effectivePath));
@@ -278,11 +295,12 @@ public class MainPanel extends javax.swing.JPanel {
     private javax.swing.JButton fileDialogBtn;
     private javax.swing.JTextField fileNameField;
     private javax.swing.JLabel inputLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane logPane;
+    private javax.swing.JTextField minQualField;
     private javax.swing.JButton processBtn;
     private javax.swing.JProgressBar progressBar;
     private javax.swing.JLabel titleLabel;
-
     // End of variables declaration//GEN-END:variables
 }
