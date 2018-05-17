@@ -21,8 +21,26 @@
 
 	</appender>
 
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%-5relative %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="GUI" class="licorice.gui.UIAppender">
+		<encoder>
+			<pattern>%-5relative %-5level %logger{35} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
 	<root level="info">
+		<appender-ref ref="GUI" />
+	</root>
+
+	<root level="debug">
 		<appender-ref ref="FILE-AUDIT" />
+		<appender-ref ref="STDOUT" />
 	</root>
 
 </configuration>

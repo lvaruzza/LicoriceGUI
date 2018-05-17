@@ -106,7 +106,7 @@ public class MainPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(logPane);
 
         titleLabel.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        titleLabel.setText("Licorice 1.3");
+        titleLabel.setText("Licorice:  Version 1.4 (beefeater)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -153,11 +153,14 @@ public class MainPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     public void appendLog(String message) {
-        try {
-            doc.insertString(doc.getLength(), message, null);
-        } catch (BadLocationException ex) {
-            log.error(ex.getMessage());
-        }
+        SwingUtilities.invokeLater(() -> {
+            try {
+                doc.insertString(doc.getLength(), message, null);
+            } catch (BadLocationException e) {
+                e.printStackTrace();
+            }
+            logPane.setCaretPosition(doc.getLength());
+        });
     }
 
     private void processBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processBtnActionPerformed
@@ -233,6 +236,8 @@ public class MainPanel extends javax.swing.JPanel {
                 fileNameField.setText("");
                 processBtn.setText("Process");                
                 processBtn.setEnabled(true);
+                processBtn.repaint();
+                this.repaint();
                 return null;
             });
             analysis.onException((Thread t, Throwable ex) -> {
@@ -241,6 +246,7 @@ public class MainPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Analysis Failed!!!");
                 processBtn.setText("Process");
                 processBtn.setEnabled(true);
+                processBtn.repaint();
             });
         } catch (IOException ex) {
             appendLog(ex.getMessage()+"\n");

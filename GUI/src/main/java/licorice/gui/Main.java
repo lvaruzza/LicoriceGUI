@@ -22,7 +22,9 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 MainPanel gui = new MainPanel();
-                JFrame frame = new JFrame("Licorice 1.2");
+                UIAppender.setMainPanel(gui);
+
+                JFrame frame = new JFrame("Licorice 1.4");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 Image icon = new ImageIcon(getClass().getClassLoader().getResource("icon.png")).getImage();
 
