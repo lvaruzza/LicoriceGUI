@@ -26,7 +26,6 @@ import java.util.Properties;
 import static utils.ZipUtil.directoryfy;
 
 /**
- *
  * @author varuzza
  */
 public class MainPanel extends javax.swing.JPanel {
@@ -37,7 +36,7 @@ public class MainPanel extends javax.swing.JPanel {
     private StyledDocument doc;
     private final JFileChooser fc = new JFileChooser();
 
-    private Integer minQual = 30;
+    private Integer minQual = 15;
 
 
     /**
@@ -46,7 +45,7 @@ public class MainPanel extends javax.swing.JPanel {
     public MainPanel() {
         try {
             String jarPath = MainPanel.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
-            System.out.println(String.format("JAR Path '%s'",jarPath));
+            System.out.println(String.format("JAR Path '%s'", jarPath));
 
             prop.load(new FileInputStream("licorice.properties"));
             minQual = Integer.parseInt(prop.getProperty("minimum.quality"));
@@ -124,50 +123,50 @@ public class MainPanel extends javax.swing.JPanel {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1143, Short.MAX_VALUE)
-                    .addComponent(progressBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(inputLabel)
-                        .addGap(57, 57, 57)
-                        .addComponent(fileNameField)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(fileDialogBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titleLabel)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(214, 214, 214)
-                                .addComponent(processBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1143, Short.MAX_VALUE)
+                                        .addComponent(progressBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(inputLabel)
+                                                .addGap(57, 57, 57)
+                                                .addComponent(fileNameField)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(fileDialogBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(titleLabel)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                                .addComponent(jLabel1)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                                .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(214, 214, 214)
+                                                                .addComponent(processBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addGap(0, 0, Short.MAX_VALUE)))
+                                .addContainerGap())
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(titleLabel)
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(fileNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(fileDialogBtn)
-                    .addComponent(inputLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(processBtn)
-                    .addComponent(jLabel1)
-                    .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
-                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
-                .addContainerGap())
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(titleLabel)
+                                .addGap(12, 12, 12)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(fileNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(fileDialogBtn)
+                                        .addComponent(inputLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(processBtn)
+                                        .addComponent(jLabel1)
+                                        .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(24, 24, 24)
+                                .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
+                                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -183,96 +182,99 @@ public class MainPanel extends javax.swing.JPanel {
     }
 
     private void processBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processBtnActionPerformed
-        try {
-            minQual = Integer.parseInt(minQualField.getText());
+        SwingUtilities.invokeLater(() -> {
+            try {
+                minQual = Integer.parseInt(minQualField.getText());
 
-            processBtn.setEnabled(false);
-            //progressBar = new JProgressBar();
-            progressBar.setMinimum(0);
-            progressBar.setMaximum(100);
+                processBtn.setEnabled(false);
+                //progressBar = new JProgressBar();
+                progressBar.setMinimum(0);
+                progressBar.setMaximum(100);
 
-            Path genomePath = Paths.get(prop.getProperty("genome.path"));
-            prop.setProperty("input.default_dir", fc.getCurrentDirectory().getAbsolutePath());
-            prop.setProperty("minimum.quality",minQual.toString());
-            prop.store(new FileOutputStream("licorice.properties"), null);
+                Path genomePath = Paths.get(prop.getProperty("genome.path"));
+                prop.setProperty("input.default_dir", fc.getCurrentDirectory().getAbsolutePath());
+                prop.setProperty("minimum.quality", minQual.toString());
+                prop.store(new FileOutputStream("licorice.properties"), null);
 
-            Path inputPath = Paths.get(fileNameField.getText());
-            
-            if (!inputPath.toFile().exists()) {
-                JOptionPane.showMessageDialog(null, "Input file does not exist");                
-                appendLog("Input file '" + inputPath + "' does not exist");
-                return;
-            }
-            
-            Path outputPath = inputPath.resolveSibling(
-                    FilenameUtils.getBaseName(inputPath.getFileName().toString()) + ".txt");
-            appendLog("Output in: '" + outputPath.getParent() +"'\n");
+                Path inputPath = Paths.get(fileNameField.getText());
 
+                if (!inputPath.toFile().exists()) {
+                    JOptionPane.showMessageDialog(null, "Input file does not exist");
+                    appendLog("Input file '" + inputPath + "' does not exist");
+                    return;
+                }
 
-            appendLog("Analysis Started...\n");
-            processBtn.setText("Processing...");
-            SimpleGenomeRef genome = new SimpleGenomeRef(genomePath);
-
-            GenomeRef.ValidationResult validation = genome.validate();
-
-            if (!validation.isValid()) {
-                appendLog("Reference Error: '" + validation.getErrors() +"'\n");
-                return;
-            }
-
-            Path effectivePath=ZipUtil.directoryfy(inputPath);
-
-            Map<String,String> samples = VCFUtils.makeSamplesDictionary(VCFUtils.listVCFFiles(effectivePath));
-
-            appendLog("==================================\n");
-            appendLog("Samples List\n");
-            appendLog("==================================\n");
-            appendLog("Sample\tFile");
-
-            samples.forEach( (k,v) -> appendLog(String.format("%s\t%s\n",k,v)));
-
-            appendLog("==================================\n");
-
-            Path samplesPath = inputPath.resolveSibling(
-                    FilenameUtils.getBaseName(inputPath.getFileName().toString()) + ".samples.txt");
-            appendLog("Samples List in: '" + samplesPath.getParent() +"'\n");
-
-            try(PrintStream out=new PrintStream(new FileOutputStream(samplesPath.toFile()))) {
-                out.println("Sample\tFile");
-                samples.forEach( (k,v) -> out.println(String.format("%s\t%s",k,v)));
-            }
+                Path outputPath = inputPath.resolveSibling(
+                        FilenameUtils.getBaseName(inputPath.getFileName().toString()) + ".txt");
+                appendLog("Output in: '" + outputPath.getParent() + "'\n");
 
 
-            analysis = new Analysis(genome,  minQual ,outputPath, VCFUtils.listVCFFiles(effectivePath));
+                appendLog("Analysis Started...\n");
+                processBtn.setText("Processing...");
+                SimpleGenomeRef genome = new SimpleGenomeRef(genomePath);
 
-            analysis.progressListener(progress -> progressBar.setValue(progress));
+                GenomeRef.ValidationResult validation = genome.validate();
 
-            analysis.onFinish(() -> {
-                log.info("Callback called");
-                appendLog("Analysis Finished.\n");
-                fileNameField.setText("");
-                processBtn.setText("Process");                
-                processBtn.setEnabled(true);
-                processBtn.repaint();
-                this.repaint();
-                return null;
-            });
-            analysis.onException((Thread t, Throwable ex) -> {
-                appendLog(ex.getMessage());
-                appendLog("Analysis Failed!!!");
+                if (!validation.isValid()) {
+                    appendLog("Reference Error: '" + validation.getErrors() + "'\n");
+                    return;
+                }
+
+                Path effectivePath = ZipUtil.directoryfy(inputPath);
+
+                Map<String, String> samples = VCFUtils.makeSamplesDictionary(VCFUtils.listVCFFiles(effectivePath));
+
+                appendLog("==================================\n");
+                appendLog("Samples List\n");
+                appendLog("==================================\n");
+                appendLog("Sample\tFile");
+
+                samples.forEach((k, v) -> appendLog(String.format("%s\t%s\n", k, v)));
+
+                appendLog("==================================\n");
+
+                Path samplesPath = inputPath.resolveSibling(
+                        FilenameUtils.getBaseName(inputPath.getFileName().toString()) + ".samples.txt");
+                appendLog("Samples List in: '" + samplesPath.getParent() + "'\n");
+
+                try (PrintStream out = new PrintStream(new FileOutputStream(samplesPath.toFile()))) {
+                    out.println("Sample\tFile");
+                    samples.forEach((k, v) -> out.println(String.format("%s\t%s", k, v)));
+                }
+
+
+                analysis = new Analysis(genome, minQual, false,outputPath, VCFUtils.listVCFFiles(effectivePath));
+
+                analysis.progressListener(progress -> progressBar.setValue(progress));
+
+                analysis.onFinish(() -> {
+                    log.info("Callback called");
+                    appendLog("Analysis Finished.\n");
+                    fileNameField.setText("");
+                    processBtn.setText("Process");
+                    processBtn.setEnabled(true);
+                    processBtn.repaint();
+                    this.repaint();
+                    return null;
+                });
+                analysis.onException((Thread t, Throwable ex) -> {
+                    appendLog(ex.getMessage());
+                    appendLog("Analysis Failed!!!");
+                    JOptionPane.showMessageDialog(null, "Analysis Failed!!!");
+                    processBtn.setText("Process");
+                    processBtn.setEnabled(true);
+                    processBtn.repaint();
+                });
+            } catch (IOException ex) {
+                appendLog(ex.getMessage() + "\n");
+                log.error(ex.getMessage());
                 JOptionPane.showMessageDialog(null, "Analysis Failed!!!");
-                processBtn.setText("Process");
-                processBtn.setEnabled(true);
-                processBtn.repaint();
-            });
-        } catch (IOException ex) {
-            appendLog(ex.getMessage()+"\n");
-            log.error(ex.getMessage());
-            JOptionPane.showMessageDialog(null, "Analysis Failed!!!");
-            ex.printStackTrace();
-        }
-        analysis.start();
-        //progressBar.
+                ex.printStackTrace();
+            }
+            analysis.start();
+            //progressBar.
+
+        });
     }//GEN-LAST:event_processBtnActionPerformed
 
     private void fileDialogBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fileDialogBtnActionPerformed

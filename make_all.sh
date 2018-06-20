@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for i in gatkRunner licorice; do
   echo $i
   pushd $i
