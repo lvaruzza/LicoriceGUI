@@ -24,7 +24,7 @@ public class Main {
                 MainPanel gui = new MainPanel();
                 UIAppender.setMainPanel(gui);
 
-                JFrame frame = new JFrame("Licorice 1.4");
+                JFrame frame = new JFrame("Licorice 1.6 (Blue Sapphire)");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 Image icon = new ImageIcon(getClass().getClassLoader().getResource("icon.png")).getImage();
 

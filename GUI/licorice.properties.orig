@@ -2,3 +2,4 @@
 input.default_dir=.
 genome.path=./genome/GCF_000004515.4_Glycine_max_v2.0_genomic.fna
 minimum.quality=30
+maximum.nocall.rate=0.95

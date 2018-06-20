@@ -2,25 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7c2dce-e457-494f-88cb-258e36e2fa73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_samtools_htsjdk_2_15_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__licorice_licorice_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_1_4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/gui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/gui.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/licorice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/licorice.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/licorice.properties.orig" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/licorice.properties.orig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/Licorice/licorice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Licorice/licorice.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatkRunner" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatkRunner/gatkRunner.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner/gatkRunner.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gatkRunner/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gatkRunner/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licorice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/licorice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Analysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Analysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Matricifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Matricifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licorice/src/main/java/licorice/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/licorice/src/main/java/licorice/cli/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBinary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/licorice/src/test/java/licorice/analysis/TestMatricify.java" beforeDir="false" afterPath="$PROJECT_DIR$/licorice/src/test/java/licorice/analysis/TestMatricify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/make_all.sh" beforeDir="false" afterPath="$PROJECT_DIR$/make_all.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/gatkRunner/target/" />
     <ignored path="$PROJECT_DIR$/GUI/target/" />
@@ -70,47 +62,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunBCFtools.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBCFtools.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="112" column="70" selection-start-line="112" selection-start-column="70" selection-end-line="112" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestMatricify.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/licorice/src/test/java/licorice/analysis/TestMatricify.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VCFUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gatkRunner/src/main/java/gatkrunner/gatk/VCFUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Matricifier.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Matricifier.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+            <state relative-caret-position="280">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4249#4259#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/licorice/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
@@ -119,50 +83,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestRunner.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/licorice/src/test/java/licorice/runner/TestRunner.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="460">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunBinary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBinary.java">
+      <file leaf-file-name="MainPanel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="396">
+              <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="55" />
               <folding>
-                <element signature="e#337#338#0" expanded="true" />
-                <element signature="e#367#368#0" expanded="true" />
+                <element signature="e#2679#2709#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainPanel.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file leaf-file-name="licorice.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/licorice.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="licorice.properties.orig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GUI/licorice.properties.orig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="65" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/cli/Main.java">
+        <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1567#1568#0" expanded="true" />
-                <element signature="e#1595#1596#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-              <folding>
-                <element signature="e#2251#2340#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="460">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -178,15 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>info</find>
-      <find>debug</find>
-      <find>doc</find>
-      <find>Finish</find>
-      <find>log.</find>
-      <find>pr</find>
-      <find>progress</find>
-      <find>progressBar</find>
-      <find>progressCon</find>
       <find>&quot;30</find>
       <find>prop</find>
       <find>snpOnly</find>
@@ -208,13 +168,22 @@
       <find>0.9</find>
       <find>0.95</find>
       <find>matrici</find>
+      <find>minQUal</find>
+      <find>1.5</find>
+      <find>beef</find>
+      <find>genome</find>
+      <find>genome.</find>
+      <find>1.4</find>
+      <find>xml</find>
+      <find>.form</find>
+      <find>main</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/licorice</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/licorice" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -543,14 +512,10 @@
         <option value="$PROJECT_DIR$/gatkRunner/src/main/java/gatkrunner/gatk/GATKFacade.java" />
         <option value="$PROJECT_DIR$/gatkRunner/src/test/java/gatkrunner/gatk/TestHelp.java" />
         <option value="$PROJECT_DIR$/licorice/src/test/java/licorice/analysis/TestCombine.java" />
-        <option value="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java" />
         <option value="$PROJECT_DIR$/GUI/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/UIAppender.java" />
         <option value="$PROJECT_DIR$/GUI/licorice.properties" />
-        <option value="$PROJECT_DIR$/GUI/licorice.properties.orig" />
-        <option value="$PROJECT_DIR$/GUI/pom.xml" />
         <option value="$PROJECT_DIR$/gatkRunner/pom.xml" />
-        <option value="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" />
         <option value="$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBinary.java" />
         <option value="$PROJECT_DIR$/licorice/src/main/java/licorice/cli/Main.java" />
         <option value="$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBCFtools.java" />
@@ -558,6 +523,10 @@
         <option value="$PROJECT_DIR$/licorice/src/test/java/licorice/analysis/TestMatricify.java" />
         <option value="$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Matricifier.java" />
         <option value="$PROJECT_DIR$/licorice/pom.xml" />
+        <option value="$PROJECT_DIR$/GUI/pom.xml" />
+        <option value="$PROJECT_DIR$/GUI/licorice.properties.orig" />
+        <option value="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java" />
+        <option value="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" />
       </list>
     </option>
   </component>
@@ -569,9 +538,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="725" />
-    <option name="width" value="1280" />
-    <option name="height" value="1382" />
+    <option name="x" value="491" />
+    <option name="y" value="598" />
+    <option name="width" value="1270" />
+    <option name="height" value="1035" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -582,6 +552,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -589,50 +560,6 @@
             <path>
               <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
               <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gatk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="gatkRunner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="reference" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
@@ -672,13 +599,86 @@
             <path>
               <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
               <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="GUI" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
               <item name="licorice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="analysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="cli" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="licoriceGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="licoriceGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="licorice" type="462c0819:PsiDirectoryNode" />
+              <item name="dataframe" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -687,6 +687,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.gradle.running" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/GUI/src/main/resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -941,7 +946,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.336478" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3294025" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49342105" visible="true" weight="0.24960938" />
@@ -954,12 +959,12 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39937106" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3278302" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="8" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3294025" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3278302" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -986,21 +991,32 @@
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java</url>
+          <line>203</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="7" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/BarcodedSamples.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ionws/src/main/java/licorice/ws/api/SelectedPlugins.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1148,30 +1164,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/licorice.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/licorice.properties.orig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1183,13 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="820">
           <caret line="51" column="39" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1272,16 +1257,6 @@
     <entry file="file://$PROJECT_DIR$/licorice/768.names.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
-          <folding>
-            <element signature="e#2251#2340#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/runner/RunBinary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1297,11 +1272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="106" selection-start-line="106" selection-end-line="106" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1335,11 +1305,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Matricifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        <state relative-caret-position="280">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4249#4259#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1348,6 +1317,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/licorice.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/src/main/resources/licorice.properties" />
+    <entry file="file://$PROJECT_DIR$/GUI/licorice.properties.orig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="65" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="124" column="47" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="55" />
+          <folding>
+            <element signature="e#2679#2709#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
