@@ -4,6 +4,7 @@
     <output url="file://$MODULE_DIR$/../../ionws/target/classes" />
     <output-test url="file://$MODULE_DIR$/../../ionws/target/test-classes" />
     <content url="file://$MODULE_DIR$/../../ionws">
+      <sourceFolder url="file://$MODULE_DIR$/../../ionws/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../../ionws/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../ionws/build" />
       <excludeFolder url="file://$MODULE_DIR$/../../ionws/out" />
