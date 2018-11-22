@@ -10,7 +10,7 @@
         <modules>
                 <!-- <module>gatkRunner</module> -->
                 <module>licorice</module>
-                <module>ionws</module>
+<!--                <module>ionws</module> -->
                 <module>GUI</module>
         </modules>
 

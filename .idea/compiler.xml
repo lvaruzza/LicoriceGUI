@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gatkRunner" />
         <module name="gui" />
-        <module name="ionws" />
         <module name="licorice" />
       </profile>
     </annotationProcessing>

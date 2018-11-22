@@ -5,7 +5,7 @@
  */
 package licorice.gui;
 
-import gatkrunner.gatk.VCFUtils;
+import utils.VCFUtils;
 import licorice.analysis.Analysis;
 import org.apache.commons.io.FilenameUtils;
 import org.slf4j.Logger;

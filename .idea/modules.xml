@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/application.iml" filepath="$PROJECT_DIR$/application.iml" />
       <module fileurl="file://$PROJECT_DIR$/GUI/gui.iml" filepath="$PROJECT_DIR$/GUI/gui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ionws.iml" filepath="$PROJECT_DIR$/.idea/modules/ionws.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ionws_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ionws_main.iml" group="ionws" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ionws_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ionws_test.iml" group="ionws" />
       <module fileurl="file://$PROJECT_DIR$/licorice/licorice.iml" filepath="$PROJECT_DIR$/licorice/licorice.iml" />
