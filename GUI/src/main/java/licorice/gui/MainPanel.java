@@ -5,6 +5,7 @@
  */
 package licorice.gui;
 
+import licorice.analysis.OutputFormat;
 import utils.VCFUtils;
 import licorice.analysis.Analysis;
 import org.apache.commons.io.FilenameUtils;
@@ -94,6 +95,10 @@ public class MainPanel extends javax.swing.JPanel {
         minQualField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         maxNCField = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        outputFormat = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
+        transpose = new javax.swing.JCheckBox();
 
         inputLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         inputLabel.setLabelFor(inputLabel);
@@ -122,7 +127,7 @@ public class MainPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(logPane);
 
         titleLabel.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        titleLabel.setText("Licorice 1.6 (blue sapphire)");
+        titleLabel.setText("Licorice 2");
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel1.setText("Min. Quality");
@@ -135,6 +140,17 @@ public class MainPanel extends javax.swing.JPanel {
 
         maxNCField.setText("0.95");
         maxNCField.setToolTipText("Minimum Variant Quality");
+
+        jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel3.setText("Output Format");
+
+        outputFormat.setModel(new javax.swing.DefaultComboBoxModel(OutputFormat.listFormats()));
+
+        jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        jLabel4.setText("Transpose");
+
+        transpose.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
+        transpose.setActionCommand("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -162,9 +178,17 @@ public class MainPanel extends javax.swing.JPanel {
                                             .addComponent(jLabel2))
                                         .addGap(79, 79, 79)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(maxNCField, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                                            .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(maxNCField, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(33, 33, 33)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel3)
+                                            .addComponent(jLabel4))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(transpose)
+                                            .addComponent(outputFormat, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(0, 506, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(466, 466, 466)
                         .addComponent(processBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -184,11 +208,15 @@ public class MainPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(outputFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(maxNCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(maxNCField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(transpose))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(processBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -273,7 +301,7 @@ public class MainPanel extends javax.swing.JPanel {
                 }
 
 
-                analysis = new Analysis(genome, minQual, maxNC,false,outputPath, VCFUtils.listVCFFiles(effectivePath));
+                analysis = new Analysis(OutputFormat.getFormat(outputFormat.getSelectedIndex(),transpose.isSelected()),genome, minQual, maxNC,outputPath, VCFUtils.listVCFFiles(effectivePath));
 
                 analysis.progressListener(progress -> progressBar.setValue(progress));
 
@@ -329,12 +357,16 @@ public class MainPanel extends javax.swing.JPanel {
     private javax.swing.JLabel inputLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane logPane;
     private javax.swing.JTextField maxNCField;
     private javax.swing.JTextField minQualField;
+    private javax.swing.JComboBox outputFormat;
     private javax.swing.JButton processBtn;
     private javax.swing.JProgressBar progressBar;
     private javax.swing.JLabel titleLabel;
+    private javax.swing.JCheckBox transpose;
     // End of variables declaration//GEN-END:variables
 }

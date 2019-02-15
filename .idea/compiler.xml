@@ -14,11 +14,11 @@
     <bytecodeTargetLevel>
       <module name="application" target="1.5" />
       <module name="gatkRunner" target="1.8" />
-      <module name="gui" target="1.8" />
+      <module name="gui" target="1.10" />
       <module name="ionws" target="1.8" />
       <module name="ionws_main" target="1.8" />
       <module name="ionws_test" target="1.8" />
-      <module name="licorice" target="1.8" />
+      <module name="licorice" target="1.10" />
       <module name="wscli" target="1.5" />
       <module name="wscli_main" target="1.8" />
       <module name="wscli_test" target="1.8" />
