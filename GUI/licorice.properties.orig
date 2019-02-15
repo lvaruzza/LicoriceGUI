@@ -1,5 +1,6 @@
 #Wed Mar 08 22:26:29 BRT 2017
 input.default_dir=.
 genome.path=./genome/Gmax_275_v2.0.softmasked.20140305.fasta
+genomes.dir=./genome/
 minimum.quality=30
 maximum.nocall.rate=0.95

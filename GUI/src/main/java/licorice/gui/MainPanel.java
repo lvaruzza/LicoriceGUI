@@ -41,12 +41,15 @@ public class MainPanel extends javax.swing.JPanel {
     private Double maxNC = 0.95;
 
 
+    private GenomeManager genomeManager;
+
     /**
      * Creates new form MainPanel
      */
     public MainPanel() {
         try {
             String jarPath = MainPanel.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
+
             System.out.println(String.format("JAR Path '%s'", jarPath));
             File propFile = new File("licorice.properties");
             if (propFile.exists()) {
@@ -58,6 +61,14 @@ public class MainPanel extends javax.swing.JPanel {
                 prop.setProperty("genome.path","./genome/GCF_000004515.4_Glycine_max_v2.0_genomic.fna");
                 prop.setProperty("input.default_dir",".");
             }
+
+            String dir = prop.getProperty("genomes.dir");
+            dir = dir==null ? "genome" : dir;
+
+            log.info(String.format("Genomes directory: '%s'",dir));
+
+            genomeManager = new GenomeManager(dir);
+
             initComponents();
             doc = logPane.getStyledDocument();
 
@@ -70,6 +81,7 @@ public class MainPanel extends javax.swing.JPanel {
 
             fc.setCurrentDirectory(defaultDir);
         } catch (Exception ex) {
+            ex.printStackTrace();
             log.error(ex.getMessage());
         }
     }
@@ -99,6 +111,7 @@ public class MainPanel extends javax.swing.JPanel {
         outputFormat = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
         transpose = new javax.swing.JCheckBox();
+        refGenome = new javax.swing.JComboBox();
 
         inputLabel.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         inputLabel.setLabelFor(inputLabel);
@@ -144,13 +157,14 @@ public class MainPanel extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel3.setText("Output Format");
 
-        outputFormat.setModel(new javax.swing.DefaultComboBoxModel(OutputFormat.listFormats()));
+        outputFormat.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "One Column", "Two Columns", "Without Bar", "Simple", "Extended" }));
 
         jLabel4.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel4.setText("Transpose");
 
         transpose.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
-        transpose.setActionCommand("");
+
+        refGenome.setModel(new javax.swing.DefaultComboBoxModel(genomeManager.listGenomes()));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -164,14 +178,10 @@ public class MainPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1143, Short.MAX_VALUE)
                             .addComponent(progressBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(inputLabel)
-                                .addGap(57, 57, 57)
-                                .addComponent(fileNameField)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(fileDialogBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(titleLabel)
+                                .addComponent(titleLabel)
+                                .addGap(0, 1041, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel1)
@@ -186,9 +196,19 @@ public class MainPanel extends javax.swing.JPanel {
                                             .addComponent(jLabel4))
                                         .addGap(18, 18, 18)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(transpose)
-                                            .addComponent(outputFormat, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(0, 506, Short.MAX_VALUE))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(transpose)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 611, Short.MAX_VALUE))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(outputFormat, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(refGenome, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addComponent(inputLabel)
+                                        .addGap(57, 57, 57)
+                                        .addComponent(fileNameField)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(fileDialogBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(466, 466, 466)
                         .addComponent(processBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -210,7 +230,8 @@ public class MainPanel extends javax.swing.JPanel {
                     .addComponent(jLabel1)
                     .addComponent(minQualField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(outputFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(outputFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(refGenome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -366,6 +387,7 @@ public class MainPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox outputFormat;
     private javax.swing.JButton processBtn;
     private javax.swing.JProgressBar progressBar;
+    private javax.swing.JComboBox refGenome;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JCheckBox transpose;
     // End of variables declaration//GEN-END:variables
