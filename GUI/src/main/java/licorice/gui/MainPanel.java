@@ -49,6 +49,7 @@ public class MainPanel extends javax.swing.JPanel {
     public MainPanel() {
         try {
             String jarPath = MainPanel.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
+            String genomesDir="./genome";
 
             System.out.println(String.format("JAR Path '%s'", jarPath));
             File propFile = new File("licorice.properties");
@@ -56,18 +57,17 @@ public class MainPanel extends javax.swing.JPanel {
                 prop.load(new FileInputStream("licorice.properties"));
                 minQual = Integer.parseInt(prop.getProperty("minimum.quality"));
                 maxNC = Double.parseDouble(prop.getProperty("maximum.nocall.rate"));
+                genomesDir = prop.getProperty("genomes.dir");
             } else {
                 prop = new Properties();
                 prop.setProperty("genome.path","./genome/GCF_000004515.4_Glycine_max_v2.0_genomic.fna");
                 prop.setProperty("input.default_dir",".");
+                prop.setProperty("genome.dir",genomesDir);
             }
 
-            String dir = prop.getProperty("genomes.dir");
-            dir = dir==null ? "genome" : dir;
+            log.info(String.format("Genomes directory: '%s'",genomesDir));
 
-            log.info(String.format("Genomes directory: '%s'",dir));
-
-            genomeManager = new GenomeManager(dir);
+            genomeManager = new GenomeManager(genomesDir);
 
             initComponents();
             doc = logPane.getStyledDocument();
@@ -165,6 +165,7 @@ public class MainPanel extends javax.swing.JPanel {
         transpose.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
 
         refGenome.setModel(new javax.swing.DefaultComboBoxModel(genomeManager.listGenomes()));
+        refGenome.setSelectedIndex(genomeManager.getIndex(prop.getProperty("genome.path")));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -269,7 +270,11 @@ public class MainPanel extends javax.swing.JPanel {
                 progressBar.setMinimum(0);
                 progressBar.setMaximum(100);
 
-                Path genomePath = Paths.get(prop.getProperty("genome.path"));
+                String genomeFilename = genomeManager.getFilename(refGenome.getSelectedIndex());
+                prop.setProperty("genome.path",genomeFilename);
+
+                Path genomePath = Paths.get(genomeFilename);
+
                 prop.setProperty("input.default_dir", fc.getCurrentDirectory().getAbsolutePath());
                 prop.setProperty("minimum.quality", minQual.toString());
                 prop.setProperty("maximum.nocall.rate", maxNC.toString());

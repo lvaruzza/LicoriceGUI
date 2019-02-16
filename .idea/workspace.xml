@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b7c2dce-e457-494f-88cb-258e36e2fa73" name="Default" comment="Add output formats classes to organize the outputs, also add the NoStd output">
-      <change afterPath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/GenomeManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI/src/test/java/licorice/gui/TestGenomeManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/gui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/gui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/licorice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/licorice.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/licorice.properties.orig" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/licorice.properties.orig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/GenomeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/GenomeManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/licorice" beforeDir="false" afterPath="$PROJECT_DIR$/licorice" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/licorice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/licorice/pom.xml" afterDir="false" />
@@ -55,15 +49,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
+            <state relative-caret-position="435">
+              <caret line="272" column="63" selection-start-line="272" selection-start-column="63" selection-end-line="272" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2743#2832#0" expanded="true" />
-                <element signature="e#4162#4163#0" expanded="true" />
-                <element signature="e#4227#4228#0" expanded="true" />
-                <element signature="e#4502#4503#0" expanded="true" />
-                <element signature="e#4564#4565#0" expanded="true" />
+                <element signature="e#3120#3209#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUI/src/test/java/licorice/gui/TestGenomeManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="210">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/licorice/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="495">
               <caret line="33" selection-start-line="26" selection-end-line="33" />
             </state>
           </provider>
@@ -93,7 +83,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUI/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
+            <state relative-caret-position="735">
               <caret line="49" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
@@ -102,10 +92,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/GenomeManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+            <state relative-caret-position="694">
+              <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1637#1638#0" expanded="true" />
+                <element signature="e#1679#1680#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,7 +106,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Analysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="75">
               <caret line="19" column="39" selection-start-line="19" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -131,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="255">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -149,12 +141,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/OutputFormat.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
+            <state relative-caret-position="555">
               <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#483#484#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,7 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>RunBina</find>
       <find>minQual</find>
       <find>0.9</find>
       <find>0.95</find>
@@ -202,6 +191,7 @@
       <find>refGenome</find>
       <find>proper</find>
       <find>ERROR</find>
+      <find>genome.path</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/licorice</dir>
@@ -287,6 +277,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -408,15 +399,14 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550267649490" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550354708322" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.35517243" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.scala.settings.ScalaProjectSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -441,7 +431,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestGenomeManager">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -569,11 +559,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestGenomeManager" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="TestNG.TestGenomeManager" />
         <item itemvalue="TestNG.TestVariantUtils" />
         <item itemvalue="TestNG.TestCombine" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -591,9 +581,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestVariantUtils - 2018.12.08 at 22h 08m 34s.xml">
-      <configuration name="TestVariantUtils" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="TestVariantUtils - 2018.12.08 at 22h 14m 46s.xml">
       <configuration name="TestVariantUtils" configurationId="TestNG" />
     </history-entry>
@@ -621,12 +608,14 @@
     <history-entry file="TestGenomeManager - 2019.02.15 at 17h 13m 58s.xml">
       <configuration name="TestGenomeManager" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="TestGenomeManager - 2019.02.16 at 17h 56m 44s.xml">
+      <configuration name="TestGenomeManager" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49342105" visible="true" weight="0.1734288" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49342105" visible="true" weight="0.17462212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -694,9 +683,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java</url>
-          <line>251</line>
+          <line>252</line>
           <properties />
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/GenomeManager.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -940,51 +935,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/OutputFormat.java">
+    <entry file="file://$PROJECT_DIR$/GUI/src/test/java/licorice/gui/TestGenomeManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="210">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/licorice/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="495">
           <caret line="33" selection-start-line="26" selection-end-line="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
+        <state relative-caret-position="735">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/src/test/java/licorice/gui/TestGenomeManager.java">
+    <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Analysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="75">
+          <caret line="19" column="39" selection-start-line="19" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/UIAppender.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -993,37 +979,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/Analysis.java">
+    <entry file="file://$PROJECT_DIR$/licorice/src/main/java/licorice/analysis/OutputFormat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="19" column="39" selection-start-line="19" selection-end-line="20" />
+        <state relative-caret-position="555">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
+        <state relative-caret-position="435">
+          <caret line="272" column="63" selection-start-line="272" selection-start-column="63" selection-end-line="272" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2743#2832#0" expanded="true" />
-            <element signature="e#4162#4163#0" expanded="true" />
-            <element signature="e#4227#4228#0" expanded="true" />
-            <element signature="e#4502#4503#0" expanded="true" />
-            <element signature="e#4564#4565#0" expanded="true" />
+            <element signature="e#3120#3209#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GUI/src/main/java/licorice/gui/GenomeManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="694">
+          <caret line="53" column="54" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1637#1638#0" expanded="true" />
+            <element signature="e#1679#1680#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1049,7 +1040,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.35517243" />
               </list>
             </option>
           </splitter-proportions>
@@ -1110,7 +1101,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.35517243" />
               </list>
             </option>
           </splitter-proportions>
