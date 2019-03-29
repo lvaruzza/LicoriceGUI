@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b7c2dce-e457-494f-88cb-258e36e2fa73" name="Default" comment="Add output formats classes to organize the outputs, also add the NoStd output">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/licorice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/licorice.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/licorice/gui/MainPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/Licorice/licorice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/dist/Licorice/licorice.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/make_dist.sh" beforeDir="false" afterPath="$PROJECT_DIR$/make_dist.sh" afterDir="false" />
-    </list>
+    <list default="true" id="1b7c2dce-e457-494f-88cb-258e36e2fa73" name="Default" comment="Add output formats classes to organize the outputs, also add the NoStd output" />
     <ignored path="$PROJECT_DIR$/gatkRunner/target/" />
     <ignored path="$PROJECT_DIR$/GUI/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -281,7 +275,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2652" />
     <option name="y" value="27" />
     <option name="width" value="1910" />
