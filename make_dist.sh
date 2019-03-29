@@ -15,5 +15,5 @@ cp $B/GUI/Licorice.bat .
 cp -Rv $B/genome .
 cd ..
 zip -r licorice.zip Licorice
-cp licorice.zip /pool0/varuzza/public
+cp licorice.zip ~/customers
 cd $B

@@ -6,6 +6,7 @@
 package licorice.gui;
 
 import licorice.analysis.OutputFormat;
+import utils.FilesSource;
 import utils.VCFUtils;
 import licorice.analysis.Analysis;
 import org.apache.commons.io.FilenameUtils;
@@ -21,8 +22,11 @@ import javax.swing.text.StyledDocument;
 import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Properties;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static utils.ZipUtil.directoryfy;
 
@@ -39,6 +43,7 @@ public class MainPanel extends javax.swing.JPanel {
 
     private Integer minQual = 15;
     private Double maxNC = 0.95;
+    private File[] inputFiles = new File[] {};
 
 
     private GenomeManager genomeManager;
@@ -57,7 +62,11 @@ public class MainPanel extends javax.swing.JPanel {
                 prop.load(new FileInputStream("licorice.properties"));
                 minQual = Integer.parseInt(prop.getProperty("minimum.quality"));
                 maxNC = Double.parseDouble(prop.getProperty("maximum.nocall.rate"));
-                genomesDir = prop.getProperty("genomes.dir");
+                String gd = prop.getProperty("genomes.dir");
+                if (gd != null)
+                    genomesDir = gd;
+                else
+                    prop.setProperty("genome.dir",genomesDir);
             } else {
                 prop = new Properties();
                 prop.setProperty("genome.path","./genome/GCF_000004515.4_Glycine_max_v2.0_genomic.fna");
@@ -73,7 +82,7 @@ public class MainPanel extends javax.swing.JPanel {
             doc = logPane.getStyledDocument();
 
             fc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
-
+            fc.setMultiSelectionEnabled(true);
             File defaultDir = new File(prop.getProperty("input.default_dir"));
             if (!defaultDir.exists()) {
                 defaultDir = new File(".");
@@ -242,6 +251,7 @@ public class MainPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(processBtn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -261,11 +271,15 @@ public class MainPanel extends javax.swing.JPanel {
     }
 
     private void processBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processBtnActionPerformed
+
+        appendLog("Analysis Started...\n");
+        processBtn.setText("Processing...");
+        processBtn.setEnabled(false);
+
         SwingUtilities.invokeLater(() -> {
             try {
                 minQual = Integer.parseInt(minQualField.getText());
 
-                processBtn.setEnabled(false);
                 //progressBar = new JProgressBar();
                 progressBar.setMinimum(0);
                 progressBar.setMaximum(100);
@@ -275,69 +289,75 @@ public class MainPanel extends javax.swing.JPanel {
 
                 Path genomePath = Paths.get(genomeFilename);
 
+
                 prop.setProperty("input.default_dir", fc.getCurrentDirectory().getAbsolutePath());
                 prop.setProperty("minimum.quality", minQual.toString());
                 prop.setProperty("maximum.nocall.rate", maxNC.toString());
                 prop.store(new FileOutputStream("licorice.properties"), null);
 
-                Path inputPath = Paths.get(fileNameField.getText());
 
-                if (!inputPath.toFile().exists()) {
-                    JOptionPane.showMessageDialog(null, "Input file does not exist");
-                    appendLog("Input file '" + inputPath + "' does not exist");
-                    return;
-                }
+                Path inputPath = Paths.get(inputFiles[0].getAbsolutePath());
 
                 Path outputPath = inputPath.resolveSibling(
                         FilenameUtils.getBaseName(inputPath.getFileName().toString()) + ".txt");
                 appendLog("Output in: '" + outputPath.getParent() + "'\n");
 
+                for(File file:inputFiles) {
+                    if (!inputPath.toFile().exists()) {
+                        JOptionPane.showMessageDialog(null, "Input file does not exist");
+                        appendLog("Input file '" + inputPath + "' does not exist");
+                        processBtn.setEnabled(true);
+                        return;
+                    }
 
-                appendLog("Analysis Started...\n");
-                processBtn.setText("Processing...");
+                    Path effectivePath = ZipUtil.directoryfy(inputPath);
+
+                    Map<String, String> samples = VCFUtils.makeSamplesDictionary(VCFUtils.listVCFFiles(effectivePath));
+
+                    appendLog("==================================\n");
+                    appendLog("Samples List\n");
+                    appendLog("==================================\n");
+                    appendLog("Sample\tFile");
+
+                    samples.forEach((k, v) -> appendLog(String.format("%s\t%s\n", k, v)));
+
+                    appendLog("==================================\n");
+
+                    Path samplesPath = inputPath.resolveSibling(
+                            FilenameUtils.getBaseName(inputPath.getFileName().toString()) + ".samples.txt");
+                    appendLog("Samples List in: '" + samplesPath.getParent() + "'\n");
+
+                    try (PrintStream out = new PrintStream(new FileOutputStream(samplesPath.toFile()))) {
+                        out.println("Sample\tFile");
+                        samples.forEach((k, v) -> out.println(String.format("%s\t%s", k, v)));
+                    }
+
+                }
+
                 SimpleGenomeRef genome = new SimpleGenomeRef(genomePath);
 
                 GenomeRef.ValidationResult validation = genome.validate();
 
                 if (!validation.isValid()) {
                     appendLog("Reference Error: '" + validation.getErrors() + "'\n");
+                    processBtn.setEnabled(true);
                     return;
                 }
 
-                Path effectivePath = ZipUtil.directoryfy(inputPath);
 
-                Map<String, String> samples = VCFUtils.makeSamplesDictionary(VCFUtils.listVCFFiles(effectivePath));
+                Stream<Path> source = new FilesSource(Arrays.stream(inputFiles).map( f -> f.getAbsolutePath()).collect(Collectors.toList())).stream();
 
-                appendLog("==================================\n");
-                appendLog("Samples List\n");
-                appendLog("==================================\n");
-                appendLog("Sample\tFile");
-
-                samples.forEach((k, v) -> appendLog(String.format("%s\t%s\n", k, v)));
-
-                appendLog("==================================\n");
-
-                Path samplesPath = inputPath.resolveSibling(
-                        FilenameUtils.getBaseName(inputPath.getFileName().toString()) + ".samples.txt");
-                appendLog("Samples List in: '" + samplesPath.getParent() + "'\n");
-
-                try (PrintStream out = new PrintStream(new FileOutputStream(samplesPath.toFile()))) {
-                    out.println("Sample\tFile");
-                    samples.forEach((k, v) -> out.println(String.format("%s\t%s", k, v)));
-                }
-
-
-                analysis = new Analysis(OutputFormat.getFormat(outputFormat.getSelectedIndex(),transpose.isSelected()),genome, minQual, maxNC,outputPath, VCFUtils.listVCFFiles(effectivePath));
+                analysis = new Analysis(OutputFormat.getFormat(outputFormat.getSelectedIndex(),transpose.isSelected()),genome, minQual, maxNC,outputPath, source);
 
                 analysis.progressListener(progress -> progressBar.setValue(progress));
 
                 analysis.onFinish(() -> {
-                    log.info("Callback called");
-                    appendLog("Analysis Finished.\n");
                     fileNameField.setText("");
                     processBtn.setText("Process");
                     processBtn.setEnabled(true);
                     processBtn.repaint();
+                    appendLog(String.format("Output File",outputPath));
+                    appendLog("Analysis Finished.\n");
                     this.repaint();
                     return null;
                 });
@@ -365,13 +385,28 @@ public class MainPanel extends javax.swing.JPanel {
         int ret = fc.showOpenDialog(this);
 
         if (ret == JFileChooser.APPROVE_OPTION) {
+            prop.setProperty("input.default_dir", fc.getCurrentDirectory().getAbsolutePath());
             try {
-                File file = fc.getSelectedFile();
-                log.info("Opening: " + file.getName() + ".");
-                fileNameField.setText(file.getCanonicalPath());
-            } catch (IOException ex) {
-                log.error(ex.getMessage());
-                ex.printStackTrace();
+                prop.store(new FileOutputStream("licorice.properties"), null);
+            } catch (IOException e) {
+                log.error(e.getMessage());
+            }
+
+            inputFiles = fc.getSelectedFiles();
+            StringBuilder fileNames = new StringBuilder();
+            if (inputFiles.length==1) {
+                log.info("Opening: " + inputFiles[0].getName() + ".");
+                try {
+                    fileNameField.setText(inputFiles[0].getCanonicalPath());
+                } catch (IOException e) {
+                    log.error(e.getMessage());
+                }
+            } else if (inputFiles.length > 1) {
+                for (File file : inputFiles) {
+                    log.info("Opening: " + file.getName() + ".");
+                    fileNames.append(file.getName());
+                }
+                fileNameField.setText(fileNames.toString());
             }
         }
     }//GEN-LAST:event_fileDialogBtnActionPerformed
