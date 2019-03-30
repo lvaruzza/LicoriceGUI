@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import java.util.stream.Stream;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.*;
 
 public class TestGenomeManager {
 
@@ -13,6 +13,6 @@ public class TestGenomeManager {
         GenomeManager gm = new GenomeManager("../genome");
         String[] names= gm.listGenomes();
         Stream.of(names).forEach(System.out::println);
-        assertEquals(2,names.length);
+        assertTrue(names.length>=2);
     }
 }
