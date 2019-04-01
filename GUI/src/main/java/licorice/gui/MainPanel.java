@@ -270,11 +270,21 @@ public class MainPanel extends javax.swing.JPanel {
         });
     }
 
+    private void enableProcessButton() {
+        processBtn.setText("Process");
+        processBtn.setEnabled(true);
+        processBtn.repaint();
+    }
+
+    private void disableProcessButton() {
+        processBtn.setText("Processing...");
+        processBtn.setEnabled(false);
+    }
+
     private void processBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processBtnActionPerformed
 
         appendLog("Analysis Started...\n");
-        processBtn.setText("Processing...");
-        processBtn.setEnabled(false);
+        disableProcessButton();
 
         SwingUtilities.invokeLater(() -> {
             try {
@@ -298,7 +308,7 @@ public class MainPanel extends javax.swing.JPanel {
 
                 Path inputPath = Paths.get(inputFiles[0].getAbsolutePath());
 
-                Path outputPath = inputPath.resolveSibling(
+                final Path outputPath = inputPath.resolveSibling(
                         FilenameUtils.getBaseName(inputPath.getFileName().toString()) + ".txt");
                 appendLog("Output in: '" + outputPath.getParent() + "'\n");
 
@@ -306,7 +316,7 @@ public class MainPanel extends javax.swing.JPanel {
                     if (!inputPath.toFile().exists()) {
                         JOptionPane.showMessageDialog(null, "Input file does not exist");
                         appendLog("Input file '" + inputPath + "' does not exist");
-                        processBtn.setEnabled(true);
+                        enableProcessButton();
                         return;
                     }
 
@@ -340,7 +350,7 @@ public class MainPanel extends javax.swing.JPanel {
 
                 if (!validation.isValid()) {
                     appendLog("Reference Error: '" + validation.getErrors() + "'\n");
-                    processBtn.setEnabled(true);
+                    enableProcessButton();
                     return;
                 }
 
@@ -353,10 +363,8 @@ public class MainPanel extends javax.swing.JPanel {
 
                 analysis.onFinish(() -> {
                     fileNameField.setText("");
-                    processBtn.setText("Process");
-                    processBtn.setEnabled(true);
-                    processBtn.repaint();
-                    appendLog(String.format("Output File",outputPath));
+                    enableProcessButton();
+                    appendLog(String.format("Output File '%s'\n",outputPath));
                     appendLog("Analysis Finished.\n");
                     this.repaint();
                     return null;
@@ -365,15 +373,14 @@ public class MainPanel extends javax.swing.JPanel {
                     appendLog(ex.getMessage());
                     appendLog("Analysis Failed!!!");
                     JOptionPane.showMessageDialog(null, "Analysis Failed!!!");
-                    processBtn.setText("Process");
-                    processBtn.setEnabled(true);
-                    processBtn.repaint();
+                    enableProcessButton();
                 });
             } catch (IOException ex) {
                 appendLog(ex.getMessage() + "\n");
                 log.error(ex.getMessage());
                 JOptionPane.showMessageDialog(null, "Analysis Failed!!!");
                 ex.printStackTrace();
+                enableProcessButton();
             }
             analysis.start();
             //progressBar.

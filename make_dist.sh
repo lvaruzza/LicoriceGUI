@@ -1,3 +1,5 @@
+./make_all.sh
+
 if [ -d dist ]; then
  rm -Rf dist
 fi
@@ -15,6 +17,7 @@ cp $B/GUI/Licorice.bat .
 mkdir genome
 #cp -Rv $B/genome .
 cd ..
-zip -r licorice.zip Licorice
-cp licorice.zip ~/customers
+rsync -av Licorice ~/customers
+#zip -r licorice.zip Licorice
+#cp licorice.zip ~/customers
 cd $B
